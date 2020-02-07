@@ -1,0 +1,8 @@
+---
+applications:
+- name: GroupSvc
+  instances: 1
+  random-route: true
+  buildpack: java_buildpack
+  env:
+    JWT_SECRET: secret123

@@ -12,4 +12,4 @@ outputs:
   - name: group-svc-build
 
 run:
-  path: source-code-from-github/ci/groupsvc/task/test-job.sh
+  path: source-code-from-github/ci/groupsvc/task/build-script.sh
