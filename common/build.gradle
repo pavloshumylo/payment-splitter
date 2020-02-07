@@ -1,0 +1,28 @@
+plugins {
+    id 'java'
+}
+
+group 'com.eleks'
+version '0.0.1-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-security', version: spring_boot_version
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: spring_boot_version
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-actuator', version: spring_boot_version
+    compile group: 'org.projectlombok', name: 'lombok', version: lombok_version
+    compile group: 'com.fasterxml.jackson.datatype', name: 'jackson-datatype-jsr310', version: jackson_version
+    implementation group: 'org.hibernate', name: 'hibernate-validator', version: '5.3.6.Final'
+    implementation group: 'io.springfox', name: 'springfox-swagger2', version: springfox_swagger2_version
+    implementation group: 'io.springfox', name: 'springfox-swagger-ui', version: springfox_swagger2_version
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-security', version: spring_boot_version
+    implementation group: 'org.glassfish.jaxb', name: 'jaxb-runtime', version: jaxb_runtime_version
+    implementation group: "com.nimbusds", name: "nimbus-jose-jwt", version: nimbus_jwt_version
+
+    testImplementation group: 'junit', name: 'junit', version: junit_version
+}

@@ -1,0 +1,36 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '2.0.3.RELEASE'
+    id 'maven-publish'
+}
+
+group 'com.eleks'
+version '0.0.1-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            from components.java
+        }
+    }
+}
+
+jar {
+    dependsOn 'generatePomFileForMavenJavaPublication'
+}
+
+dependencies {
+    implementation project(':common')
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-data-jpa', version: spring_boot_version
+    implementation group: 'com.h2database', name: 'h2', version: h2_version
+    implementation group: 'mysql', name: 'mysql-connector-java', version: mysql_connector_java_version
+    implementation group: 'org.flywaydb', name: 'flyway-core', version: flyway_version
+
+    testImplementation group: 'org.springframework.boot', name: 'spring-boot-starter-test', version: spring_boot_version
+}

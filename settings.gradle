@@ -1,0 +1,5 @@
+rootProject.name = 'PaymentSplitter'
+include 'UserService'
+include 'GroupService'
+include 'common'
+

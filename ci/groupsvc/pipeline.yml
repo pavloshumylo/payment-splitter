@@ -1,0 +1,38 @@
+---
+resource_types:
+- name: maven-resource
+  type: docker-image
+  source:
+    repository: nulldriver/maven-resource
+    tag: latest
+
+resources:
+  - name: source-code-from-github
+    type: git
+    source:
+      uri: https://github.com/pavloshumylo/payment-splitter.git
+      branch: master
+      username: ((github_username))
+      password: ((github_password))
+  - name: artifact
+    type: maven-resource
+    source:
+      url: http://172.25.11.156:8091/repository/maven-releases/
+      snapshot_url: http://172.25.11.156:8091/repository/maven-snapshots/
+      artifact: com.eleks:GroupSvc:jar
+      username: ((nexus_username))
+      password: ((nexus_password))
+      skip_cert_check: true
+
+jobs:
+  - name: svc-module-run-tests-job
+    public: true
+    plan:
+      - get: source-code-from-github
+        trigger: true
+      - task: run-all-tests-task
+        file: source-code-from-github/ci/groupsvc/task/test-task.yml
+      - put: artifact
+        params:
+          file: group-svc-build/GroupService-*.jar
+          pom_file: group-svc-build/pom.xml

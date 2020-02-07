@@ -1,0 +1,18 @@
+---
+resources:
+  - name: source-code-from-github
+    type: git
+    source:
+      uri: https://github.com/pavloshumylo/payment-splitter.git
+      branch: master
+      username: ((github_username))
+      password: ((github_password))
+
+jobs:
+  - name: common-module-run-tests-job
+    public: true
+    plan:
+      - get: source-code-from-github
+        trigger: true
+      - task: run-all-tests-task
+        file: source-code-from-github/ci/common/task/test-task.yml

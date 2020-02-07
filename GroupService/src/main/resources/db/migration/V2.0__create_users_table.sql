@@ -1,0 +1,6 @@
+CREATE TABLE users(
+  id BIGINT AUTO_INCREMENT PRIMARY KEY,
+  user_id BIGINT NOT NULL,
+  group_id BIGINT,
+  FOREIGN KEY (group_id) REFERENCES groups (id)
+);
