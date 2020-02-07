@@ -54,4 +54,4 @@ jobs:
       - put: pcf-access
         params:
           manifest: source-code-from-github/ci/groupsvc/manifest.yml
-          path: artifact/GroupService-*.jar
+          path: artifact/GroupSvc-*.jar
