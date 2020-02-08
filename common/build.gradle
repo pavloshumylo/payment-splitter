@@ -14,7 +14,7 @@ repositories {
 dependencies {
     compile group: 'org.springframework.boot', name: 'spring-boot-starter-security', version: spring_boot_version
     compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: spring_boot_version
-    compile group: 'org.springframework.boot', name: 'spring-boot-starter-actuator', version: spring_boot_version
+    //compile group: 'org.springframework.boot', name: 'spring-boot-starter-actuator', version: spring_boot_version
     compile group: 'org.projectlombok', name: 'lombok', version: lombok_version
     compile group: 'com.fasterxml.jackson.datatype', name: 'jackson-datatype-jsr310', version: jackson_version
     implementation group: 'org.hibernate', name: 'hibernate-validator', version: '5.3.6.Final'
