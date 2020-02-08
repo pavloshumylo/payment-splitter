@@ -1,6 +1,10 @@
 jwt:
   secret: ${JWT_SECRET}
   validInterval: 86400000
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: create
 management:
   security:
     enabled: false
