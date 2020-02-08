@@ -37,6 +37,7 @@ public class BaseSecurityConfig extends WebSecurityConfigurerAdapter {
                 "/configuration/security",
                 "/swagger-ui.html",
                 "/webjars/**",
-                "/actuator/**");
+                "/actuator/**",
+                "/cloudfoundryapplication/**");
     }
 }
