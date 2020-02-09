@@ -7,4 +7,4 @@ applications:
   env:
     JWT_SECRET: secret123
   services:
-    - mysqldb
+    - my_splitter_db
