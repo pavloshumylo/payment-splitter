@@ -6,3 +6,5 @@ applications:
   buildpack: java_buildpack
   env:
     JWT_SECRET: secret123
+  services:
+    - mysqldb
