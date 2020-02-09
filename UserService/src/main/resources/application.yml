@@ -1,12 +1,6 @@
 jwt:
   secret: ${JWT_SECRET}
   validInterval: 86400000
-spring:
-  datasource:
-    driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://localhost:3308/user_service_schema?useSSL=false
-    username: root
-    password: password
 management:
   security:
     enabled: false
