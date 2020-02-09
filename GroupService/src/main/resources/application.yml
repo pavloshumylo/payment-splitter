@@ -1,5 +1,5 @@
 users:
-  endPointHost: http://localhost:8085
+  endPointHost: ${USERS_HOST}
 jwt:
   secret: ${JWT_SECRET}
   validInterval: 86400000

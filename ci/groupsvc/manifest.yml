@@ -6,3 +6,4 @@ applications:
   buildpack: java_buildpack
   env:
     JWT_SECRET: secret123
+    USERS_HOST: http://usersvc-restless-bilby.cfapps.io
