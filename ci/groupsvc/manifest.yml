@@ -6,6 +6,6 @@ applications:
   buildpack: java_buildpack
   env:
     JWT_SECRET: secret123
-    USERS_HOST: http://usersvc-restless-bilby.cfapps.io
+    USERS_HOST: http://usersvc-excellent-cassowary.cfapps.io
   services:
     - my_splitter_db_group_svc    
