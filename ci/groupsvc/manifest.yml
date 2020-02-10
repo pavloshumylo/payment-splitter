@@ -8,4 +8,4 @@ applications:
     JWT_SECRET: secret123
     USERS_HOST: http://usersvc-restless-bilby.cfapps.io
   services:
-    - my_splitter_db    
+    - my_splitter_db_group_svc    

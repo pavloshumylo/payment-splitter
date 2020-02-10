@@ -26,8 +26,8 @@ resources:
   - name: artifact
     type: maven-resource
     source:
-      url: http://172.25.11.156:8091/repository/maven-releases/
-      snapshot_url: http://172.25.11.156:8091/repository/maven-snapshots/
+      url: http://172.25.11.156:8098/repository/maven-releases/
+      snapshot_url: http://172.25.11.156:8098/repository/maven-snapshots/
       artifact: com.eleks:UserSvc:jar
       username: ((nexus_username))
       password: ((nexus_password))
